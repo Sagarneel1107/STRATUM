@@ -1,0 +1,77 @@
+# Citation metadata for this repository (Citation File Format 1.2.0).
+# GitHub reads this file and renders a "Cite this repository" button.
+#
+# BEFORE PUBLISHING, fill in the four fields marked TODO. The file is valid
+# YAML as it stands, but the placeholder author name must be replaced.
+
+cff-version: 1.2.0
+message: "If you use this toolkit in your research, please cite both this repository and the architecture paper listed under references."
+title: "STRATUM: an integrated memristor process-in-memory chip toolkit"
+abstract: >-
+  A device-to-chip simulation toolkit for memristor-based in-memory
+  computing. It models a pulse-programmed memristor, single-device and
+  crossbar-level non-idealities, ADC/DAC and digital peripherals, and a
+  three-level chip organisation (tile / processing unit / array) driven by a
+  RISC-V-like vector instruction workflow. Workloads include an MNIST MLP
+  compiled to that instruction set, ResNet-18 and VGG-16 with
+  hardware-aware training, and a detection task, all scored through the same
+  datapath arithmetic. A Tkinter front-end exposes every simulation
+  parameter and produces self-contained HTML reports.
+type: software
+
+authors:
+  # TODO: replace with your name as you want it cited.
+  - given-names: "TODO-GivenName"
+    family-names: "TODO-FamilyName"
+    email: "sagarneelgh1107@gmail.com"
+    affiliation: "IMChip B.V."
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # optional
+
+  # Add further contributors here, or replace the block above with the
+  # company as a single corporate author:
+  #   - name: "IMChip B.V."
+
+version: "0.1.0"                    # TODO: set the version you tag on release
+date-released: "2026-09-06"         # TODO: set to the actual release date
+repository-code: "https://github.com/TODO-org/TODO-repo"   # TODO
+license: Apache-2.0
+
+keywords:
+  - in-memory computing
+  - process-in-memory
+  - memristor
+  - RRAM
+  - crossbar
+  - RISC-V
+  - hardware-aware training
+  - neuromorphic
+  - hardware simulation
+
+references:
+  - type: conference-paper
+    title: "Heterogeneous Instruction Set Architecture for RRAM-enabled In-memory Computing"
+    collection-title: "Proceedings of the 18th ACM International Symposium on Nanoscale Architectures (NANOARCH '23)"
+    year: 2023
+    authors:
+      - given-names: "H."
+        family-names: "Zhou"
+      - given-names: "Z."
+        family-names: "Zhou"
+      - given-names: "S."
+        family-names: "Ren"
+      - given-names: "J."
+        family-names: "Chen"
+      - given-names: "Y."
+        family-names: "Li"
+      - given-names: "X."
+        family-names: "Miao"
+
+  - type: report
+    title: "Learning Multiple Layers of Features from Tiny Images"
+    year: 2009
+    institution:
+      name: "University of Toronto"
+    authors:
+      - given-names: "Alex"
+        family-names: "Krizhevsky"
+    notes: "Source of the CIFAR-10 dataset used by the ResNet-18 / VGG-16 studies."

@@ -1,0 +1,75 @@
+STRATUM - integrated memristor PIM toolkit
+Copyright 2026 IMChip B.V.
+
+This product includes software developed by IMChip B.V.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this software except in compliance with the License. A copy of the
+License is distributed with this software in the file LICENSE, and is also
+available at http://www.apache.org/licenses/LICENSE-2.0
+
+
+--------------------------------------------------------------------------
+Scientific attribution
+--------------------------------------------------------------------------
+
+The chip architecture and the instruction-set layer modelled in
+chip_architecture.py and riscv_imc_workflow.py follow, with documented
+deviations, the architecture described in:
+
+    H. Zhou, Z. Zhou, S. Ren, J. Chen, Y. Li and X. Miao,
+    "Heterogeneous Instruction Set Architecture for RRAM-enabled
+     In-memory Computing", NANOARCH '23.
+
+That paper is the source of the architectural ideas; no text, figures or
+code from it are reproduced in this repository. Work that builds on this
+toolkit should cite both the paper above and this repository (see
+CITATION.cff).
+
+
+--------------------------------------------------------------------------
+Third-party dependencies
+--------------------------------------------------------------------------
+
+This software depends on, but does not redistribute, the following
+packages. Each remains under its own license:
+
+    PyTorch (torch)         BSD 3-Clause
+    torchvision             BSD 3-Clause
+    NumPy                   BSD 3-Clause
+    Matplotlib              Matplotlib License (BSD-style, PSF-derived)
+    Tkinter / CPython       Python Software Foundation License
+
+
+--------------------------------------------------------------------------
+Datasets
+--------------------------------------------------------------------------
+
+The Apache License covers the source code in this repository. It does NOT
+cover any dataset or dataset-derived artefact. Datasets used by this
+toolkit are obtained at run time from their original distributors and are
+governed by their own terms:
+
+    MNIST       Y. LeCun, C. Cortes and C. J. C. Burges.
+                Distributed by its maintainers under CC BY-SA 3.0.
+                Fetched by mnist_ann.py via torchvision.
+
+    CIFAR-10    A. Krizhevsky, "Learning Multiple Layers of Features from
+                Tiny Images", 2009. Distributed without a formal license;
+                the authors request citation of the technical report.
+                Fetched by resnet_vgg_hwat.py via torchvision.
+
+If you add pre-trained weights or cached dataset copies to a distribution
+of this software, note that those artefacts derive from the datasets above
+and may carry the datasets' terms rather than the Apache License.
+
+
+--------------------------------------------------------------------------
+No warranty on simulation results
+--------------------------------------------------------------------------
+
+This toolkit is a simulator. Area, power, latency, energy, TOPS and TOPS/W
+figures it reports are model outputs, not measurements of fabricated
+silicon, and the write-path cost model in particular is not calibrated.
+Sections 7 and 8 of the License apply: the software is provided AS IS,
+without warranties or conditions of any kind.
