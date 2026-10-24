@@ -1,11 +1,10 @@
 # Citation metadata for this repository (Citation File Format 1.2.0).
-# GitHub reads this file and renders a "Cite this repository" button.
-#
-# BEFORE PUBLISHING, fill in the four fields marked TODO. The file is valid
-# YAML as it stands, but the placeholder author name must be replaced.
 
 cff-version: 1.2.0
-message: "If you use this toolkit in your research, please cite both this repository and the architecture paper listed under references."
+message: >-
+  If you use this toolkit in your research, please cite this repository and
+  the architecture paper it models (Zhou et al., NANOARCH '23, the first entry
+  under references).
 title: "STRATUM: an integrated memristor process-in-memory chip toolkit"
 abstract: >-
   A device-to-chip simulation toolkit for memristor-based in-memory
@@ -20,21 +19,16 @@ abstract: >-
 type: software
 
 authors:
-  # TODO: replace with your name as you want it cited.
-  - given-names: "TODO-GivenName"
-    family-names: "TODO-FamilyName"
-    email: "sagarneelgh1107@gmail.com"
-    affiliation: "IMChip B.V."
-    # orcid: "https://orcid.org/0000-0000-0000-0000"   # optional
+  - name: "IMChip B.V."
+    email: "contact@imchip.nl"
 
-  # Add further contributors here, or replace the block above with the
-  # company as a single corporate author:
-  #   - name: "IMChip B.V."
-
-version: "0.1.0"                    # TODO: set the version you tag on release
-date-released: "2026-09-06"         # TODO: set to the actual release date
-repository-code: "https://github.com/TODO-org/TODO-repo"   # TODO
+version: "0.1.0"
+date-released: "2026-09-06"
+repository-code: "https://github.com/Sagarneel1107/STRATUM"
 license: Apache-2.0
+
+# DOI under which this work can be cited.
+# doi: ""
 
 keywords:
   - in-memory computing
@@ -48,23 +42,50 @@ keywords:
   - hardware simulation
 
 references:
+  # Architecture modelled by chip_architecture.py and riscv_imc_workflow.py.
   - type: conference-paper
     title: "Heterogeneous Instruction Set Architecture for RRAM-enabled In-memory Computing"
     collection-title: "Proceedings of the 18th ACM International Symposium on Nanoscale Architectures (NANOARCH '23)"
+    publisher:
+      name: "ACM"
     year: 2023
+    start: 1
+    end: 6
+    doi: "10.1145/3611315.3633244"
     authors:
-      - given-names: "H."
+      - given-names: "Houji"
         family-names: "Zhou"
-      - given-names: "Z."
+      - given-names: "Zhiwei"
         family-names: "Zhou"
-      - given-names: "S."
+      - given-names: "Shengguang"
         family-names: "Ren"
-      - given-names: "J."
+      - given-names: "Jia"
         family-names: "Chen"
-      - given-names: "Y."
+      - given-names: "Yi"
         family-names: "Li"
-      - given-names: "X."
+      - given-names: "Xiangshui"
         family-names: "Miao"
+
+  # Datasets.
+  - type: article
+    title: "Gradient-based learning applied to document recognition"
+    journal: "Proceedings of the IEEE"
+    year: 1998
+    volume: 86
+    issue: "11"
+    start: 2278
+    end: 2324
+    doi: "10.1109/5.726791"
+    authors:
+      - given-names: "Yann"
+        family-names: "LeCun"
+      - given-names: "Léon"
+        family-names: "Bottou"
+      - given-names: "Yoshua"
+        family-names: "Bengio"
+      - given-names: "Patrick"
+        family-names: "Haffner"
+    notes: "Source of the MNIST dataset used by the MLP study."
 
   - type: report
     title: "Learning Multiple Layers of Features from Tiny Images"
@@ -75,3 +96,92 @@ references:
       - given-names: "Alex"
         family-names: "Krizhevsky"
     notes: "Source of the CIFAR-10 dataset used by the ResNet-18 / VGG-16 studies."
+
+  # Related compute-in-memory simulators.
+  - type: conference-paper
+    title: "DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies"
+    collection-title: "2019 IEEE International Electron Devices Meeting (IEDM)"
+    publisher:
+      name: "IEEE"
+    year: 2019
+    start: "32.5.1"
+    end: "32.5.4"
+    doi: "10.1109/IEDM19573.2019.8993491"
+    authors:
+      - given-names: "Xiaochen"
+        family-names: "Peng"
+      - given-names: "Shanshi"
+        family-names: "Huang"
+      - given-names: "Yandong"
+        family-names: "Luo"
+      - given-names: "Xiaoyu"
+        family-names: "Sun"
+      - given-names: "Shimeng"
+        family-names: "Yu"
+    notes: "Related work: compute-in-memory benchmarking simulator."
+
+  - type: article
+    title: "MNSIM: Simulation Platform for Memristor-Based Neuromorphic Computing System"
+    journal: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"
+    year: 2018
+    volume: 37
+    issue: "5"
+    start: 1009
+    end: 1022
+    doi: "10.1109/TCAD.2017.2729466"
+    authors:
+      - given-names: "Lixue"
+        family-names: "Xia"
+      - given-names: "Boxun"
+        family-names: "Li"
+      - given-names: "Tianqi"
+        family-names: "Tang"
+      - given-names: "Peng"
+        family-names: "Gu"
+      - given-names: "Pai-Yu"
+        family-names: "Chen"
+      - given-names: "Shimeng"
+        family-names: "Yu"
+      - given-names: "Yu"
+        family-names: "Cao"
+      - given-names: "Yu"
+        family-names: "Wang"
+      - given-names: "Yuan"
+        family-names: "Xie"
+      - given-names: "Huazhong"
+        family-names: "Yang"
+    notes: "Related work: behaviour-level memristor neuromorphic system simulator."
+
+  - type: conference-paper
+    title: "PUMA: A Programmable Ultra-efficient Memristor-based Accelerator for Machine Learning Inference"
+    collection-title: "Proceedings of the 24th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS '19)"
+    publisher:
+      name: "ACM"
+    year: 2019
+    start: 715
+    end: 731
+    doi: "10.1145/3297858.3304049"
+    authors:
+      - given-names: "Aayush"
+        family-names: "Ankit"
+      - given-names: "Izzat"
+        family-names: "El Hajj"
+      - given-names: "Sai Rahul"
+        family-names: "Chalamalasetti"
+      - given-names: "Geoffrey"
+        family-names: "Ndu"
+      - given-names: "Martin"
+        family-names: "Foltin"
+      - given-names: "R. Stanley"
+        family-names: "Williams"
+      - given-names: "Paolo"
+        family-names: "Faraboschi"
+      - given-names: "Wen-mei W."
+        family-names: "Hwu"
+      - given-names: "John Paul"
+        family-names: "Strachan"
+      - given-names: "Kaushik"
+        family-names: "Roy"
+      - given-names: "Dejan S."
+        family-names: "Milojicic"
+    notes: "Related work: programmable memristor accelerator with its own ISA and compiler."
